@@ -4,7 +4,7 @@ all: $(targets)
 
 pdflatex = pdflatex -interaction=errorstopmode -halt-on-error
 
-%.pdf:  %.tex
+%.pdf:  %.tex ITiCSE2020.bib
 	$(pdflatex) $<
 	bibtex $*
 	$(pdflatex) $<
